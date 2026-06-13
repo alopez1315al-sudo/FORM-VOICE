@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: formvoice
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
